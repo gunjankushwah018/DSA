@@ -1,6 +1,6 @@
 # Optimal Solution:Greedy approach
 # Time Complexity: O(n)
-# Space Complexity: 
+# Space Complexity: O(1)
 
 class Solution(object):
     def canJump(self,nums):
