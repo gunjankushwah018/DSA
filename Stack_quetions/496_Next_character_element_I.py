@@ -20,3 +20,6 @@ class Solution(object):
 
         for x in nums1:
             ans.append(nge[x])
+        
+        return ans
+
