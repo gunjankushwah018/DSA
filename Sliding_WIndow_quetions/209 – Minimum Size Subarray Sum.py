@@ -1,0 +1,21 @@
+# Approach: Sliding Window
+# Time Complexity: O(n), where n is the length of the input list because we are iterating through the list once.
+# Space Complexity: O(1), as we are using a constant amount of extra space to store the minimum length.
+
+class Solution(object):
+    def minSubArrayLen(self, target, nums):
+        l = 0
+        window_sum = 0
+        min_len = float('inf')
+        for r in range(len(nums)):
+            window_sum += nums[r]
+
+            while window_sum >= target:
+                min_len = min(min_len,r-l+1)
+                window_sum -= nums[l]
+                l += 1
+
+        if min_len == float('inf'):
+            return 0
+
+        return min_len
